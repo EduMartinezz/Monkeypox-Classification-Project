@@ -3,32 +3,30 @@
 ## **Overview**
 This repository focuses on applying machine learning techniques to predict Monkeypox outcomes using real-world clinical and demographic data. It aims to build an accurate classification model while identifying the most significant factors influencing Monkeypox PCR results. The project explores various machine learning algorithms and advanced ensemble methods, making it a valuable tool for public health initiatives.
 
----
 
 ## **Project Highlights**
-- **Data Cleaning**: Removed inconsistencies in variables like Age and categorical symptoms. Imputed missing values to create a robust dataset.
-- **Predictive Modeling and Comprehensive Model Comparison**: Used multiple machine learning algorithms including Logistic Regression, Naïve Bayes, Random Forest, XGBoost, and Gradient Boosting.
-- Compared traditional classifiers (e.g., Logistic Regression, SVM) with ensemble and boosting techniques (e.g., XGBoost, Gradient Boosting).
+- **Data Cleaning**: Removed inconsistencies in variables like **Age** and categorical symptoms. Imputed missing values to create a robust dataset.
+- **Predictive Modeling and Comprehensive Model Comparison**: Used multiple machine learning algorithms including Logistic Regression, **Naïve Bayes**, **Random Forest**, **XGBoost, and Gradient Boosting**.
+- Compared traditional classifiers (e.g., **Logistic Regression, SVM**) with ensemble and boosting techniques (e.g., **XGBoost, Gradient Boosting**).
 - **Feature Importance Analysis**: Identified key risk factors for Monkeypox, including `Age`, `HIV Infection`, and `Encoded Systemic Illness`.
 - **Visualization**: Included interpretable visualizations such as SHAP values, feature importance, correlation heatmaps, and model comparison.
 -  **Feature Interpretability**:SHAP and Feature Importance visualizations provided insights into model decision-making.
   
-- **Advanced Techniques**:
+  **Advanced Techniques**:
   - Hyperparameter tuning using Grid Search and Bayesian Optimization.
   - Stacking and Voting classifiers for ensemble learning.
   - Cross-validation for generalization performance.
   - Bootstrap confidence intervals to validate model accuracy.
----
 
 ## **Dataset**
-- **Features**:
+**Features**:
   - Age
   - Encoded Systemic Illness
   - HIV Infection
   - Symptoms such as Rectal Pain, Sore Throat, and Oral Lesions.
-- **Target**: `MPOX_Result` (Binary: 0 = Negative, 1 = Positive)
 
----
+**Target**: `MPOX_Result` (Binary: 0 = Negative, 1 = Positive)
+
 
 ## **Directory Structure**
 
@@ -58,17 +56,14 @@ monkeypox-classification/
 
 
 
----
-
 ## **Getting Started**
 
-### **1. Clone the Repository**   
-```bash
+**1. Clone the Repository**   
 git clone https://github.com/yourusername/monkeypox-classification.git
-cd monkeypox-classificatio
+cd monkeypox-classification
 
 **Install Dependencies**   
-```pip install -r requirements.txt```
+pip install -r requirements.txt
 
 ## **3. Explore Notebooks** 
 Navigate to the notebooks/ folder to review:
@@ -77,52 +72,42 @@ Navigate to the notebooks/ folder to review:
 - modeling.ipynb for model building and evaluation.
 
 ### 4. **Run Python Scripts**
-Data Cleaning:
+### Data Cleaning:
 python src/data_cleaning.py
 
-Feature Engineering:
+## Feature Engineering:
 python src/feature_engineering.py
 
 ### **Model training and evaluation:** 
 python src/model_training.py
 
- Visualizations
-1. Distribution of MPOX Results
-
-2. Correlation Heatmap
-
-3. Feature Importance - Random Forest
-
-4. SHAP Summary Plot
-
-5. Model Comparison
-
-6. Partial Dependence Plot
+### **Visualizations** 
+**Distribution of MPOX Results, Correlation Heatmap, Feature Importance - Random Forest, SHAP Summary Plot, Model Comparison, Partial Dependence Plot.**
 
 
-Evaluation Metrics
+## **Evaluation Metrics**
 The following models were evaluated:
 
-Model	                Accuracy
-Gradient Boosting	     70.06%
-AdaBoost	             69.56%
-Naïve Bayes	           68.22%
-Logistic Regression	   68.14%
-SVM	                   67.92%
-XGBoost	               67.86%
-KNN	                   63.88%
-Random Forest	         62.64%
-Decision Tree	         58.46%
+**Model**	                **Accuracy**
+Gradient Boosting	          70.06%
+AdaBoost	                  69.56%
+Naïve Bayes	                68.22%
+Logistic Regression	        68.14%
+SVM	                        67.92%
+XGBoost	                    67.86%
+KNN	                        63.88%
+Random Forest	              62.64%
+Decision Tree	              58.46%
 
 
-### Advanced Techniques
-Cross-Validation:
+### **Advanced Techniques**
+**Cross-Validation:**
 - Achieved a mean CV accuracy of 69.10% with Gradient Boosting.
 
-Hyperparameter Tuning:
+## Hyperparameter Tuning:
 - Used GridSearchCV and Bayesian Optimization to fine-tune model parameters.
 
-Interpretability:
+## Interpretability:
 - SHAP and Partial Dependence Plots for feature importance.
 
 
